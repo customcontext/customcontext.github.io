@@ -1,27 +1,50 @@
 @import url("https://fonts.googleapis.com/css?family=Barrio");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500i,900");
+html,
 body {
   background: #02AAB0;
   background: -webkit-linear-gradient(to left, #02AAB0, #00CDAC);
-  background: linear-gradient(to left, #222, #333);
-  /*height: 90vh;*/
-  width: 90vw;
-  color: #ddd; }
-  body #demo,
-  body #demo1 {
-    position: absolute;
-    color: #000;
-    width: 40%;
-    height: 50%;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-family: "Roboto", sans-serif; }
+  background: linear-gradient(to left, #308082, #00a388);
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+  html .container,
+  body .container {
+    margin: 0 auto;
+    height: 100%;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background: url("../img/bg.png");
+    padding: 10px; }
+    html .container .header,
+    body .container .header {
+      position: relative;
+      /*white-space: nowrap;*/
+      font-size: 30px;
+      margin: 50px auto;
+      /*padding: 0px;*/
+      /*margin-top:50px;*/
+      text-align: center; }
+  html #demo1,
   body #demo1 {
     top: 100px;
     /*bottom:10px;*/ }
+  html #demo,
   body #demo {
     right: 10px; }
+
+html #demo1,
+body #demo1, html #demo,
+body #demo {
+  position: absolute;
+  color: #000;
+  width: 40%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Roboto", sans-serif; }
 
 /*# sourceMappingURL=mainstyle.css.map */

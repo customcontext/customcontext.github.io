@@ -2,39 +2,46 @@ var myCustomClBck = function(src) {
   alert('hello from '+src);
 };
 
-function ready(){
-var demo = document.getElementById('demo');
-var demo1 = document.getElementById('demo1');
+function downloadURI(uri, name){
+  var link = document.createElement("a");
+  link.download = name;
+  link.href = uri;
+  link.click();
+}
 
-demo.setCtxMenu({
-  settings: {
-    marker:false,
-    itemHeight: '25px',
-    dividercolor: '#2f2',
-    hovercolor: 'linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%)',//'#4CB8C4',
-    backgroundcolor: '#222',
-    textcolor: '#ddd',
-    hovertextcolor: '#f2f',
-    submenutextcolor: '#f33',
-    headercolor:'#5c3daa',
-    headertextcolor:'#ffff30',
-    font:'Barrio'
-  },
-  menu: {
-    item1: {name: 'Header',header:true},
-    item2: {name: 'First Item',onClick: e => {myCustomClBck('First Item');}},
-    item3: {name: 'Second Item', onClick: e => {myCustomClBck('Second Item');} },
-    item4: {name: 'Third Item' ,onClick: e => {myCustomClBck('Third Item');},divider: true},
-    item5: {name: 'Fourth Item',onClick: e => {myCustomClBck('Fourth Item');}},
-    item6: {name: 'Submenu' ,submenu:{
-      menu:{item1:{name: 'Subheader',header:true},
-            item2:{name:'First subitem',onClick:e=>{myCustomClBck('First subitem');}},
-            item3:{name:'Second subitem',onClick:e=>{myCustomClBck('Second subitem');},divider: true},
-            item4:{name:'Third subitem',onClick:e=>{myCustomClBck('Third subitem');}},
-          }}},
-    item7: {name: 'Sisth Item',onClick: e => {myCustomClBck('Sisth Item');}},
-  }
-});
+function ready(){
+// var demo = document.getElementById('demo');
+var demo1 = document.getElementById('container');
+
+// demo.setCtxMenu({
+//   settings: {
+//     marker:false,
+//     itemHeight: '25px',
+//     dividercolor: '#2f2',
+//     hovercolor: 'linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%)',//'#4CB8C4',
+//     backgroundcolor: '#222',
+//     textcolor: '#ddd',
+//     hovertextcolor: '#f2f',
+//     submenutextcolor: '#f33',
+//     headercolor:'#5c3daa',
+//     headertextcolor:'#ffff30',
+//     font:'Barrio'
+//   },
+//   menu: {
+//     item1: {name: 'Header',header:true},
+//     item2: {name: 'First Item',onClick: e => {myCustomClBck('First Item');}},
+//     item3: {name: 'Second Item', onClick: e => {myCustomClBck('Second Item');} },
+//     item4: {name: 'Third Item' ,onClick: e => {myCustomClBck('Third Item');},divider: true},
+//     item5: {name: 'Fourth Item',onClick: e => {myCustomClBck('Fourth Item');}},
+//     item6: {name: 'Submenu' ,submenu:{
+//       menu:{item1:{name: 'Subheader',header:true},
+//             item2:{name:'Download',onClick:e=>{downloadURI('https://raw.githubusercontent.com/customcontext/customcontext.github.io/master/README.md','smthing')}},
+//             item3:{name:'Second subitem',onClick:e=>{myCustomClBck('Second subitem');},divider: true},
+//             item4:{name:'Third subitem',onClick:e=>{myCustomClBck('Third subitem');}},
+//           }}},
+//     item7: {name: 'Sisth Item',onClick: e => {myCustomClBck('Sisth Item');}},
+//   }
+// });
 
 demo1.setCtxMenu({
   menu: {
