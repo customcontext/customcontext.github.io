@@ -1,0 +1,117 @@
+.opu-subItem + div, .opu-ctxMenu, .opu-revCtxMenu {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 4px #555;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  transition: .2s;
+  font-family: "Roboto", sans-serif;
+  color: #111;
+  padding: 0;
+  margin: 0; }
+  .opu-subItem + div ul, .opu-ctxMenu ul, .opu-revCtxMenu ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-position: outside; }
+    .opu-subItem + div ul li, .opu-ctxMenu ul li, .opu-revCtxMenu ul li {
+      position: relative;
+      display: block;
+      padding-left: 20px;
+      padding-right: 20px;
+      vertical-align: middle;
+      line-height: 40px;
+      list-style-type: none;
+      height: 40px;
+      white-space: nowrap; }
+      .opu-subItem + div ul li:hover, .opu-ctxMenu ul li:hover, .opu-revCtxMenu ul li:hover {
+        background-color: #4286f4;
+        color: white; }
+      .opu-subItem + div ul li:before, .opu-ctxMenu ul li:before, .opu-revCtxMenu ul li:before {
+        position: absolute;
+        visibility: hidden;
+        width: 4px;
+        height: 90%;
+        top: 5%;
+        left: 2px;
+        background-color: rgba(0, 0, 0, 0.3);
+        content: ''; }
+      .opu-subItem + div ul li:hover:before, .opu-ctxMenu ul li:hover:before, .opu-revCtxMenu ul li:hover:before {
+        visibility: visible; }
+    .opu-subItem + div ul .opu-divider, .opu-ctxMenu ul .opu-divider, .opu-revCtxMenu ul .opu-divider {
+      cursor: default;
+      height: 8px; }
+      .opu-subItem + div ul .opu-divider:before, .opu-ctxMenu ul .opu-divider:before, .opu-revCtxMenu ul .opu-divider:before {
+        position: absolute;
+        visibility: visible;
+        width: 90%;
+        height: 1px;
+        top: 3px;
+        left: 5%;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        content: ''; }
+      .opu-subItem + div ul .opu-divider:hover, .opu-ctxMenu ul .opu-divider:hover, .opu-revCtxMenu ul .opu-divider:hover {
+        background-color: rgba(255, 255, 255, 0); }
+    .opu-subItem + div ul .opu-header, .opu-ctxMenu ul .opu-header, .opu-revCtxMenu ul .opu-header {
+      cursor: default;
+      color: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.2);
+      height: 25px;
+      line-height: 25px;
+      font-weight: 900;
+      text-align: left;
+      vertical-align: 0%; }
+      .opu-subItem + div ul .opu-header:before, .opu-ctxMenu ul .opu-header:before, .opu-revCtxMenu ul .opu-header:before {
+        visibility: hidden !important; }
+      .opu-subItem + div ul .opu-header:hover, .opu-ctxMenu ul .opu-header:hover, .opu-revCtxMenu ul .opu-header:hover {
+        color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.2); }
+        .opu-subItem + div ul .opu-header:hover:before, .opu-ctxMenu ul .opu-header:hover:before, .opu-revCtxMenu ul .opu-header:hover:before {
+          visibility: hidden; }
+    .opu-subItem + div ul:hover, .opu-ctxMenu ul:hover, .opu-revCtxMenu ul:hover {
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05) inset, 0px 4px 8px #555; }
+
+.opu-subItem {
+  color: rgba(0, 0, 0, 0.5); }
+  .opu-subItem:after {
+    position: inherit;
+    right: -10%;
+    display: inline-block;
+    border-top: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9;
+    transform: rotate(54deg) skew(20deg);
+    font-size: 20px;
+    width: 8px;
+    height: 8px;
+    content: ''; }
+  .opu-subItem + div {
+    transition: 0s;
+    display: none;
+    position: absolute; }
+    .opu-subItem + div:hover {
+      display: block; }
+  .opu-subItem:hover + div {
+    display: block; }
+
+.opu-ctxMenu {
+  animation-name: appear; }
+
+.opu-revCtxMenu {
+  animation-name: revappear; }
+
+@keyframes appear {
+  0% {
+    transform: scale(0.1) translateX(-100px); }
+  100% {
+    transform: scale(1) translateX(0px); } }
+@keyframes revappear {
+  0% {
+    transform: scale(0.1) translateX(100px); }
+  100% {
+    transform: scale(1) translateX(0px); } }
+
+/*# sourceMappingURL=custom-context-style.css.map */

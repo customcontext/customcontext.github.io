@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Barrio");
+body {
+  background: #02AAB0;
+  background: -webkit-linear-gradient(to left, #02AAB0, #00CDAC);
+  background: linear-gradient(to left, #222, #333);
+  height: 90vh;
+  width: 90vw;
+  color: #ddd; }
+  body #demo,
+  body #demo1 {
+    position: absolute;
+    color: #000;
+    width: 90%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Roboto", sans-serif; }
+  body #demo1 {
+    top: 100px;
+    /*bottom:10px;*/ }
+  body #demo {
+    right: 10px; }
+
+/*# sourceMappingURL=mainstyle.css.map */
