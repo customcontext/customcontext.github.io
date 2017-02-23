@@ -18,40 +18,39 @@ Object.prototype.setCtxMenu = function(options) {
     this._customcss = '';
     if (options.settings) {
       if (options.settings.font) {
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' *, .opu-revCtxMenu #opu-' + this._targetid + ' *{font-family: ' + options.settings.font + ';}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' *{font-family: ' + options.settings.font + ';}';
       }
       if (options.settings.hasOwnProperty('marker')) { //marker
         if (!options.settings.marker) {
-          this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:hover:before, .opu-revCtxMenu #opu-' + this._targetid + ' ul li:hover:before {visibility:hidden;}';
+          this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:hover:before{visibility:hidden;}';
         }
       }
       if (options.settings.hovercolor) { //hover-color
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:hover, .opu-revCtxMenu #opu-' + this._targetid + ' ul li:hover {background: ' + options.settings.hovercolor + '}' +
-          '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-divider:hover, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-divider:hover{background: rgba(255, 255, 255, 0);}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:hover:not(.opu-header):not(.opu-divider){background: ' + options.settings.hovercolor + '}';
       }
       if (options.settings.backgroundcolor) { //background-color
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ', .opu-revCtxMenu #opu-' + this._targetid + ' {background: ' + options.settings.backgroundcolor + '} .opu-ctxMenu #opu-' + this._targetid + ' div, .opu-revCtxMenu #opu-' + this._targetid + 'div {background: ' + options.settings.backgroundcolor + '}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + '{background: ' + options.settings.backgroundcolor + '} .opu-ctxMenu #opu-' + this._targetid + ' div{background: ' + options.settings.backgroundcolor + '}';
       }
       if (options.settings.itemHeight) { //itemHeight
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li, .opu-revCtxMenu #opu-' + this._targetid + ' ul li {height: ' + options.settings.itemHeight + '; line-height: ' + options.settings.itemHeight + ';} .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-divider, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-divider {height:8px}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:not(.opu-divider){height: ' + options.settings.itemHeight + '; line-height: ' + options.settings.itemHeight + ';}';
       }
       if (options.settings.textcolor) { //textcolor
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li, .opu-revCtxMenu #opu-' + this._targetid + ' ul li {color: ' + options.settings.textcolor + ';}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li{color: ' + options.settings.textcolor + ';}';
       }
       if (options.settings.submenutextcolor) { //submenutextcolor
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' .opu-subItem , .opu-revCtxMenu #opu-' + this._targetid + ' .opu-subItem {color: ' + options.settings.submenutextcolor + ';} .opu-ctxMenu #opu-' + this._targetid + ' .opu-subItem:after , .opu-revCtxMenu #opu-' + this._targetid + ' .opu-subItem:after { border-top: 1px solid ' + options.settings.submenutextcolor + '; border-right: 1px solid ' + options.settings.submenutextcolor + ';}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' .opu-subItem{color: ' + options.settings.submenutextcolor + ';} .opu-ctxMenu #opu-' + this._targetid + ' .opu-subItem:after{ border-top: 1px solid ' + options.settings.submenutextcolor + '; border-right: 1px solid ' + options.settings.submenutextcolor + ';}';
       }
       if (options.settings.hovertextcolor) { //hovertextcolor
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:hover, .opu-revCtxMenu #opu-' + this._targetid + ' ul li:hover {color: ' + options.settings.hovertextcolor + ';}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul li:hover{color: ' + options.settings.hovertextcolor + ';}';
       }
       if (options.settings.dividercolor) { //dividercolor
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-divider:before, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-divider:before {background-color:' + options.settings.dividercolor + ';} .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-divider:hover:before, .opu-revCtxMenu #opu-' + this._targetid + ' ul opu-divider:hover:before {background-color:' + options.settings.dividercolor + ' !important; visibility: visible;}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-divider:before{background-color:' + options.settings.dividercolor + ';} .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-divider:hover:before{background-color:' + options.settings.dividercolor + ' !important; visibility: visible;}';
       }
       if (options.settings.headercolor) { //headercolor
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-header, .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header:hover, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-header:hover {background:' + options.settings.headercolor + ';}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header, .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header:hover{background:' + options.settings.headercolor + ';}';
       }
       if (options.settings.headertextcolor) { //headertextcolor
-        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-header, .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header:hover, .opu-revCtxMenu #opu-' + this._targetid + ' ul .opu-header:hover {color:' + options.settings.headertextcolor + ';}';
+        this._customcss += '.opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header, .opu-ctxMenu #opu-' + this._targetid + ' ul .opu-header:hover{color:' + options.settings.headertextcolor + ';}';
       }
     }
     var style = document.createElement('style');

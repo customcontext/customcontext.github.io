@@ -44,9 +44,12 @@ var demo1 = document.getElementById('container');
 // });
 
 demo1.setCtxMenu({
+  settings: {
+    hovercolor: 'hsla(170, 100%, 32%, 1)',
+  },
   menu: {
-    item1: {name: 'Header 1',header:true},
-    item2: {name: 'First Item' ,onClick:e=>{myCustomClBck('First Item');}},
+    item1: {name: 'Custom context',header:true},
+    item2: {name: 'The Scrypts' ,onClick:e=>{myCustomClBck('First Item');}},
     item3: {name: 'Second Item',onClick: e => {myCustomClBck('Second Item');},divider: true},
     item4: {name: 'Submenu',submenu:{
                     menu:{
