@@ -9,6 +9,32 @@ body {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
+  .github{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 10em;
+    overflow: hidden;
+    p{
+      background: #444;
+      margin: 0;
+      padding: 3px;
+      width: 16em;
+      transform: translate(50%, -50%) rotate(45deg) translate(0, 5em); 
+      -webkit-transform: translate(50%, -50%) rotate(45deg) translate(0, 5em);
+      a{
+        display: block;
+        padding: 0.2em 0;
+        text-align: center;
+        border: dashed white 1px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #F0F0F0;
+      }
+    }
+  }
   .container{
     margin: 0 auto; 
     height:100%;
@@ -16,36 +42,36 @@ body {
     background-color:rgba(255,255,255,0.8);
     background: url('../img/bg.png');
     padding: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05) inset, 0px 4px 8px #555;
+    border-left:solid rgba(0, 0, 0, 0.5) 1px;
+    border-right:solid rgba(0, 0, 0, 0.5) 1px;
     .header{
       position:relative;
-      /*white-space: nowrap;*/
       font-size: 30px;
       margin: 50px auto;
-      /*padding: 0px;*/
-      /*margin-top:50px;*/
       text-align: center;
     }
-  }
-  #demo1{
-    @extend %demo;
-    top: 100px;
-    /*bottom:10px;*/
-  }
-  #demo{
-    @extend %demo;
-    right:10px;
+    .snippet{
+      overflow-x: scroll;
+      margin: 0 auto; 
+      width: 750px;
+      padding: 1em;
+      background: #222;
+      border-radius: 3px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #000 #777 #777 #000;
+      &::-webkit-scrollbar-track {
+        background-color: #222;
+      }
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 2px;
+        margin-bottom: 1px;
+      }
+    }
   }
 }
-
-%demo {
-    position:absolute;
-    color: #000;
-    width: 40%;
-    height: 50%;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left:5%;
-    margin-right:5%;
-    font-family: "Roboto", sans-serif;
-  }
